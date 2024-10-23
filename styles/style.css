@@ -1,43 +1,47 @@
 
 .header {
-    padding-top: 95px;
-    padding-right: 80px;
-    padding-bottom: 95px;
-    padding-left: 50px;
+    padding: 93px 80px 93px 50px;
 }
 
-.header__nav {
+.wrapper {
     display: flex;
+    align-items: center;
     font-size: large;
-    flex-wrap: nowrap;
-    align-items: center;
     gap: 32px;
+    flex-wrap: nowrap;
 }
 
-.link__no-underline {
+.nounderline {
     text-decoration: none;
-}
-
-.header__nav ul {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header__nav ul li {
-    position:relative;
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 0.01em;
-    list-style-type: circle;
-    gap: 30px;
 }
 
 .header__link {
     white-space: nowrap;
     text-decoration: none;
-    border-bottom: 1.4px solid black;
+    border-bottom: 1.4px solid #000;
     padding-bottom: 0.1px;
+}
+
+.header__nav ul {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.header__nav ul li {
+    position:relative;
+    list-style-type: circle;
+    gap: 30px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    
+}
+
+.header__nav ul li:first-child {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .header__logo {
@@ -48,22 +52,22 @@
 .header__logo img {
     height: 105px;
     width: 148px;
-    margin: 0 auto;
 }
 
 .address {
     font-style: normal;
-    padding-left: 153px;
+    padding-left: 154px;
+    padding-bottom: 5px;
 }
 
 .header__info {
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 0.01em;
-    line-height: 135%;
+    line-height: 140%;
     color: #000;
     text-decoration: none;
-    border-bottom: 1.4px solid black;
+    border-bottom: 1.4px solid #000;
     padding-bottom: 0.1px;
 }
 
@@ -71,6 +75,9 @@
     font-weight: 400;
     font-size: 18px;
     color: #000;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
 }
 
 .pic__img {
@@ -89,8 +96,9 @@
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.title {
+.text {
     display: flex;
+    text-transform: uppercase;
     flex-direction: column;
     margin-bottom: 10px;
     padding-top: 172px;
@@ -102,49 +110,34 @@
     gap: 25px;
 }
 
-.begin__title {
+.text-align-start {
     text-align: left;
     padding-left: 54px;
 }
 
-.words-on {
-    letter-spacing: 30px;
-}
-
-.words-o {
-    letter-spacing: 30px;
-}
-
-.center__title {
+.text-align-center {
     padding-top: 5px;
     text-align: center;
 }
 
-.words-te {
-    letter-spacing: 30px;
-}
-
-.words-be {
-    letter-spacing: 60px;
-}
-
-.finish__title {
+.text-align-finish {
     line-height: 100%;
     text-align: right;
     padding-right: 20px;
     bottom: 10px;
 }
 
-.words-n {
+.letter-spacing-standart {
     letter-spacing: 30px;
 }
 
-.words-ado {
-    letter-spacing: 30px;
+.letter-spacing-extended {
+    letter-spacing: 60px;
 }
 
 .bottom__text {
     display: inline-block;
+    text-transform: uppercase;
     padding-left: 80px;
     margin-block-start: 130px;
     font-weight: 500;
@@ -164,6 +157,7 @@
 .bid {
     display: inline-block;
     font-family: Raleway, sans-serif;
+    text-transform: uppercase;
     width: 256px;
     height: 51px;
     padding: 0;
@@ -186,6 +180,7 @@
 }
 
 .lots__title {
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 40px;
     margin-left: 40px;
@@ -270,7 +265,8 @@
 
 .lots__see-more {
     display: block;
-    width: 195px;
+    width: 232px;
+    font-size: 20px;
     text-align: left;
     margin-top: 25px;
     padding-left: 40px;
@@ -292,42 +288,44 @@
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding-top: 146px;
+    padding-top: 180px;
     gap: 20px;
 }
 
-.about__auction-column {
-    width: 1052px;
-    height: 595px;
+.about__another-auction {
     display: flex;
     flex-direction: row;
 }
 
 .about__logo {
-    margin-left: 71px;
-    margin-top: 35px;
-    padding: 64px 46.48px;
+    display: flex;
     width: 240px;
     height: 240px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 71px;
+    padding: 74px 52px;
     border-radius: 50%;
     background-color: #000;
 }
 
 .about__logo-img {
-    display: block;
     width: 148px;
+    height: 145px;
+    margin-right: 4px;
 }
 
-.about__auction-column-right {
+.about__another-auction-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 70px;
-    padding-top: 100px;
+    padding-top: 105px;
 }
 
 .about__auction-title {
-    margin-bottom: 90px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
     font-size: 40px;
     font-weight: 700;
 }
@@ -337,6 +335,30 @@
     font-size: 20px;
     line-height: 120%;
     color: #000;
+}
+
+.about__auction-text:first-of-type {
+    margin-bottom: 20px;
+    padding-top: 80px;
+    letter-spacing: 0.01em;
+}
+
+.about__auction-text:last-of-type {
+    margin-bottom: 0;
+    padding-top: 5px;
+    margin-right: 5px;
+}
+
+.ours {
+    letter-spacing: 0.02em;
+}
+
+.seems {
+    letter-spacing: 0.03em;
+}
+
+.ours-text {
+    letter-spacing: 0.01em;
 }
 
 .footer {
@@ -407,8 +429,8 @@
     border-bottom: 1.4px solid black;
     padding-bottom: 0.1px;
 }
-  
-.footer__social {
+
+.nav {
     display: flex;
     justify-content: flex-end;
     list-style: none;
